@@ -1,22 +1,41 @@
-/** kitadmin-v2.1.0 MIT License By http://kit.zhengjinfan.cn Author Van Zheng */
-;"use strict";
+/** kitadmin-v2.1.0 MIT License By http://kit.zhengjinfan.cn Author Van Zheng */ ;
+"use strict";
 layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
     layui.layer;
-    var i = layui.jquery, e = layui.laytpl, n = layui.utils, a = layui.lodash, r = n.localStorage, o = layui.route,
-        d = "KITADMINTABS", l = ".kit-tabs", c = ".kit-tab-title", s = ".kit-tabs-toolsbox", h = void 0, f = void 0,
-        u = void 0, p = {
+    var i = layui.jquery,
+        e = layui.laytpl,
+        n = layui.utils,
+        a = layui.lodash,
+        r = n.localStorage,
+        o = layui.route,
+        d = "KITADMINTABS",
+        l = ".kit-tabs",
+        c = ".kit-tab-title",
+        s = ".kit-tabs-toolsbox",
+        h = void 0,
+        f = void 0,
+        u = void 0,
+        p = {
             TITLE: ['<li lay-id="{{d.id}}" data-path={{d.path}}>', '<span title="{{d.title}}">', "{{#if(d.icon){}}", '<i class="layui-icon">{{d.icon}}</i> ', "{{#}}}", "{{d.title}}", "</span>", '<i class="layui-icon kit-tab-close">&#x1006;</i>', "</li>"].join(""),
             CONTENT: ['<div class="kit-tabs-item" data-path={{d.path}} lay-tab-id="{{d.id}}" data-component="{{d.component}}" data-rendered="{{d.rendered}}">', "<router-view></router-view>", "</div>"].join(""),
             TOOLSITEM: ['<li class="kit-item" lay-id="{{d.id}}">', '<a href="javascript:;">', '<span title="{{d.title}}">{{d.title}}</span>&nbsp;', '<i class="layui-icon layui-close">&#x1006;</i>', "</a>", "</li>"].join("")
-        }, v = function () {
-            this.config = {onChangeBefore: void 0, onChanged: void 0, onRendered: void 0}, this.version = "1.0.0"
-        }, y = !1;
+        },
+        v = function () {
+            this.config = {
+                onChangeBefore: void 0,
+                onChanged: void 0,
+                onRendered: void 0
+            }, this.version = "1.0.0"
+        },
+        y = !1;
     v.prototype.set = function (t) {
         return i.extend(!0, this.config, t), this
     }, v.prototype.render = function (t) {
-        var e = this, a = i(l).attr("kit-target");
+        var e = this,
+            a = i(l).attr("kit-target");
         return f = void 0 === f ? i(c) : f, h = void 0 === h ? i('div.kit-tabs-content[kit-tabs="' + a + '"]') : h, u = void 0 === u ? i(s).children("ul") : u, f.children("li").each(function (t, n) {
-            var a = i(this), r = a.attr("lay-id");
+            var a = i(this),
+                r = a.attr("lay-id");
             a.off("click").on("click", function () {
                 e.switch(r)
             });
@@ -36,9 +55,10 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
         var a = this;
         a.config;
         if (void 0 === t.active) {
-            var r = C.getCaches(), o = n.find(r, function (i) {
-                return i.path === t.path
-            });
+            var r = C.getCaches(),
+                o = n.find(r, function (i) {
+                    return i.path === t.path
+                });
             if (void 0 !== o && (t.id = o.id), a.exists(t.id)) return void a.switch(t.id);
             if (a.existsByPath(t.path)) {
                 var d = a.getByPath(t.path);
@@ -55,9 +75,10 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
             f.append(r), e(p.CONTENT).render(t, function (r) {
                 h.append(r), e(p.TOOLSITEM).render(t, function (e) {
                     u.append(e);
-                    var r = C.getCaches(), o = n.find(r, function (i) {
-                        return i.path === t.path
-                    });
+                    var r = C.getCaches(),
+                        o = n.find(r, function (i) {
+                            return i.path === t.path
+                        });
                     void 0 === o ? r.push({
                         id: t.id,
                         title: t.title,
@@ -77,19 +98,25 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
             this.switch(e)
         }
         i.remove(), C.findContent(t).remove(), C.findTools(t).remove();
-        var n = C.getCaches(), a = n.findIndex(function (i) {
-            return i.id === t
-        });
+        var n = C.getCaches(),
+            a = n.findIndex(function (i) {
+                return i.id === t
+            });
         n.splice(a, 1), C.setCaches(n)
     }, v.prototype.switch = function (t) {
-        var i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], e = this.config, r = C.findTitle(t);
+        var i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            e = this.config,
+            r = C.findTitle(t);
         if (0 !== r.length) {
             r.width();
-            var o = r[0].offsetLeft, d = f.parent("div.kit-tab").width();
-            if (o > d) ;
-            var l = r.attr("data-path"), c = C.getCaches(), s = n.find(c, function (t) {
-                return t.path === l
-            });
+            var o = r[0].offsetLeft,
+                d = f.parent("div.kit-tab").width();
+            if (o > d);
+            var l = r.attr("data-path"),
+                c = C.getCaches(),
+                s = n.find(c, function (t) {
+                    return t.path === l
+                });
             if (void 0 !== s && s.active && i && (p(), r.click()), !i) {
                 p(), a.forEach(c, function (t) {
                     t.active = !1
@@ -119,11 +146,21 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
     }, v.prototype.get = function (t) {
         if (!this.exists(t)) return null;
         var i = C.findTitle(t);
-        return {id: t, title: i.children("span").text(), path: i.attr("data-path"), _content: C.getContent(t)}
+        return {
+            id: t,
+            title: i.children("span").text(),
+            path: i.attr("data-path"),
+            _content: C.getContent(t)
+        }
     }, v.prototype.getByPath = function (t) {
         if (!this.existsByPath(t)) return null;
-        var i = C.findTitleByPath(t), e = i.children("span").text();
-        return {id: i.attr("lay-id"), title: e, path: t}
+        var i = C.findTitleByPath(t),
+            e = i.children("span").text();
+        return {
+            id: i.attr("lay-id"),
+            title: e,
+            path: t
+        }
     }, v.prototype.getCurrId = function () {
         return C.getCurrId()
     }, v.prototype.init = function () {
@@ -138,48 +175,62 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
             o.render(i, t, function () {
                 t.attr("data-rendered", "true")
             })
-        }, prevHandler: function () {
+        },
+        prevHandler: function () {
             i(".kit-tabs-prev").off("click").on("click", function () {
-                var t = f[0].style.left, e = parseInt(t.substr(0, t.indexOf("px")));
-                0 !== e && (e = (e += i(l).width()) > 0 ? 0 : e, f.animate({left: e + "px"}))
+                var t = f[0].style.left,
+                    e = parseInt(t.substr(0, t.indexOf("px")));
+                0 !== e && (e = (e += i(l).width()) > 0 ? 0 : e, f.animate({
+                    left: e + "px"
+                }))
             })
-        }, nextHandler: function () {
+        },
+        nextHandler: function () {
             i(".kit-tabs-next").off("click").on("click", function () {
-                var t = f[0].style.left, e = parseInt(t.substr(0, t.indexOf("px"))), n = i(l).width(), a = -18;
+                var t = f[0].style.left,
+                    e = parseInt(t.substr(0, t.indexOf("px"))),
+                    n = i(l).width(),
+                    a = -18;
                 if (f.children("li").each(function () {
-                    var t = i(this).width();
-                    a += t + 48
-                }), n < a && e - n > -a) {
+                        var t = i(this).width();
+                        a += t + 48
+                    }), n < a && e - n > -a) {
                     parseInt(a / n);
-                    e = e - n >= 0 ? 0 : e - n, f.animate({left: e + "px"})
+                    e = e - n >= 0 ? 0 : e - n, f.animate({
+                        left: e + "px"
+                    })
                 }
             })
-        }, toolHandler: function () {
+        },
+        toolHandler: function () {
             i(".kit-tabs-tools").off("click").on("click", function (t) {
                 layui.stope(t), i(s).show(), i(document).on("click", function () {
                     i(s).hide(), i(this).off("click")
                 })
             })
-        }, toolBoxHandler: function (t) {
+        },
+        toolBoxHandler: function (t) {
             var e = this;
             i(s).find("li.kit-item").each(function () {
-                var n = i(this), a = n.data("action"), r = n.attr("lay-id");
+                var n = i(this),
+                    a = n.data("action"),
+                    r = n.attr("lay-id");
                 n.off("click").on("click", function () {
                     var n = e.getCurrId();
                     switch (a) {
-                        case"closeOther":
+                        case "closeOther":
                             f.find('li:not("[lay-id=' + n + ']")').each(function (e, n) {
                                 var a = i(this).attr("lay-id");
                                 0 !== e && t.remove(a)
                             });
                             break;
-                        case"closeAll":
+                        case "closeAll":
                             f.find("li:first-child").siblings().each(function () {
                                 var e = i(this).attr("lay-id");
                                 t.remove(e)
                             });
                             break;
-                        case"refresh":
+                        case "refresh":
                             var o = C.getContent(n);
                             C.renderHTMLForContent(o.elem, o.path);
                             break;
@@ -190,18 +241,23 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
                     i(s).hide()
                 })
             })
-        }, initCaches: function (t) {
+        },
+        initCaches: function (t) {
             var i = this.getCaches();
             a.forEach(i, function (i) {
                 t.add(i)
             })
-        }, findTitle: function (t) {
+        },
+        findTitle: function (t) {
             return f.children('li[lay-id="' + t + '"]')
-        }, findTitleByPath: function (t) {
+        },
+        findTitleByPath: function (t) {
             return f.children('li[data-path="' + t + '"]')
-        }, findContent: function (t) {
+        },
+        findContent: function (t) {
             return h.children('div.kit-tabs-item[lay-tab-id="' + t + '"]')
-        }, getContent: function (t) {
+        },
+        getContent: function (t) {
             var i = this.findContent(t);
             return {
                 elem: i,
@@ -209,14 +265,18 @@ layui.define(["layer", "laytpl", "utils", "lodash", "route"], function (t) {
                 path: i.attr("data-path"),
                 isRendered: "true" === i.attr("data-rendered")
             }
-        }, findTools: function (t) {
+        },
+        findTools: function (t) {
             return u.find('li.kit-item[lay-id="' + t + '"]')
-        }, getCurrId: function () {
+        },
+        getCurrId: function () {
             return f.find("li.layui-this").attr("lay-id")
-        }, getCaches: function () {
+        },
+        getCaches: function () {
             var t = r.getItem(d);
             return null === t && (t = []), t
-        }, setCaches: function (t) {
+        },
+        setCaches: function (t) {
             r.setItem(d, t)
         }
     };

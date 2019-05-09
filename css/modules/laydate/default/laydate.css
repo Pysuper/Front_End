@@ -1,5 +1,8 @@
 /** layui-v2.3.0 MIT License By https://www.layui.com */
-.laydate-set-ym, .layui-laydate, .layui-laydate *, .layui-laydate-list {
+.laydate-set-ym,
+.layui-laydate,
+.layui-laydate *,
+.layui-laydate-list {
     box-sizing: border-box
 }
 
@@ -32,7 +35,9 @@ html #layuicss-laydate {
     width: 272px
 }
 
-.layui-laydate-content td, .layui-laydate-header *, .layui-laydate-list li {
+.layui-laydate-content td,
+.layui-laydate-header *,
+.layui-laydate-list li {
     transition-duration: .3s;
     -webkit-transition-duration: .3s
 }
@@ -42,6 +47,7 @@ html #layuicss-laydate {
         -webkit-transform: translate3d(0, 20px, 0);
         opacity: .3
     }
+
     to {
         -webkit-transform: translate3d(0, 0, 0);
         opacity: 1
@@ -53,6 +59,7 @@ html #layuicss-laydate {
         transform: translate3d(0, 20px, 0);
         opacity: .3
     }
+
     to {
         transform: translate3d(0, 0, 0);
         opacity: 1
@@ -68,15 +75,20 @@ html #layuicss-laydate {
     animation: none
 }
 
-.laydate-ym-show .laydate-next-m, .laydate-ym-show .laydate-prev-m {
+.laydate-ym-show .laydate-next-m,
+.laydate-ym-show .laydate-prev-m {
     display: none !important
 }
 
-.laydate-ym-show .laydate-next-y, .laydate-ym-show .laydate-prev-y {
+.laydate-ym-show .laydate-next-y,
+.laydate-ym-show .laydate-prev-y {
     display: inline-block !important
 }
 
-.laydate-time-show .laydate-set-ym span[lay-type=month], .laydate-time-show .laydate-set-ym span[lay-type=year], .laydate-time-show .layui-laydate-header .layui-icon, .laydate-ym-show .laydate-set-ym span[lay-type=month] {
+.laydate-time-show .laydate-set-ym span[lay-type=month],
+.laydate-time-show .laydate-set-ym span[lay-type=year],
+.laydate-time-show .layui-laydate-header .layui-icon,
+.laydate-ym-show .laydate-set-ym span[lay-type=month] {
     display: none !important
 }
 
@@ -86,7 +98,8 @@ html #layuicss-laydate {
     padding: 10px 70px 5px
 }
 
-.laydate-set-ym span, .layui-laydate-header i {
+.laydate-set-ym span,
+.layui-laydate-header i {
     padding: 0 5px;
     cursor: pointer
 }
@@ -144,7 +157,8 @@ html #layuicss-laydate {
     border-spacing: 0
 }
 
-.layui-laydate-content td, .layui-laydate-content th {
+.layui-laydate-content td,
+.layui-laydate-content th {
     width: 36px;
     height: 30px;
     padding: 5px;
@@ -213,7 +227,8 @@ html #layuicss-laydate {
     border-radius: 2px
 }
 
-.layui-laydate-list > li, .layui-laydate-range .layui-laydate-main {
+.layui-laydate-list>li,
+.layui-laydate-range .layui-laydate-main {
     display: inline-block;
     vertical-align: middle
 }
@@ -228,7 +243,7 @@ html #layuicss-laydate {
     background-color: #fff
 }
 
-.layui-laydate-list > li {
+.layui-laydate-list>li {
     position: relative;
     width: 33.3%;
     height: 36px;
@@ -238,12 +253,12 @@ html #layuicss-laydate {
     cursor: pointer
 }
 
-.laydate-month-list > li {
+.laydate-month-list>li {
     width: 25%;
     margin: 17px 0
 }
 
-.laydate-time-list > li {
+.laydate-time-list>li {
     height: 100%;
     margin: 0;
     line-height: normal;
@@ -261,7 +276,7 @@ html #layuicss-laydate {
     overflow: hidden
 }
 
-.laydate-time-list > li:hover ol {
+.laydate-time-list>li:hover ol {
     overflow-y: auto
 }
 
@@ -289,7 +304,10 @@ html #layuicss-laydate {
     width: 546px
 }
 
-.layui-laydate-range .laydate-main-list-0 .laydate-next-m, .layui-laydate-range .laydate-main-list-0 .laydate-next-y, .layui-laydate-range .laydate-main-list-1 .laydate-prev-m, .layui-laydate-range .laydate-main-list-1 .laydate-prev-y {
+.layui-laydate-range .laydate-main-list-0 .laydate-next-m,
+.layui-laydate-range .laydate-main-list-0 .laydate-next-y,
+.layui-laydate-range .laydate-main-list-1 .laydate-prev-m,
+.layui-laydate-range .laydate-main-list-1 .laydate-prev-y {
     display: none
 }
 
@@ -297,7 +315,8 @@ html #layuicss-laydate {
     border-left: 1px solid #e2e2e2
 }
 
-.layui-laydate, .layui-laydate-hint {
+.layui-laydate,
+.layui-laydate-hint {
     border: 1px solid #d2d2d2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
     background-color: #fff;
@@ -308,7 +327,8 @@ html #layuicss-laydate {
     border-bottom: 1px solid #e2e2e2
 }
 
-.layui-laydate-header i:hover, .layui-laydate-header span:hover {
+.layui-laydate-header i:hover,
+.layui-laydate-header span:hover {
     color: #5FB878
 }
 
@@ -334,7 +354,8 @@ html #layuicss-laydate {
     background-color: #00F7DE !important
 }
 
-.layui-laydate-content td:hover, .layui-laydate-list li:hover {
+.layui-laydate-content td:hover,
+.layui-laydate-list li:hover {
     background-color: #eaeaea;
     color: #333
 }
@@ -350,15 +371,17 @@ html #layuicss-laydate {
     border-left-width: 1px
 }
 
-.laydate-time-list > li:hover {
+.laydate-time-list>li:hover {
     background: 0 0
 }
 
-.layui-laydate-content .laydate-day-next, .layui-laydate-content .laydate-day-prev {
+.layui-laydate-content .laydate-day-next,
+.layui-laydate-content .laydate-day-prev {
     color: #d2d2d2
 }
 
-.laydate-selected.laydate-day-next, .laydate-selected.laydate-day-prev {
+.laydate-selected.laydate-day-next,
+.laydate-selected.laydate-day-prev {
     background-color: #f8f8f8 !important
 }
 
@@ -387,7 +410,8 @@ html #layuicss-laydate {
     color: #fff !important
 }
 
-.layui-laydate .laydate-disabled, .layui-laydate .laydate-disabled:hover {
+.layui-laydate .laydate-disabled,
+.layui-laydate .laydate-disabled:hover {
     background: 0 0 !important;
     color: #d2d2d2 !important;
     cursor: not-allowed !important;
@@ -413,11 +437,13 @@ html #layuicss-laydate {
     background-color: #009688
 }
 
-.laydate-theme-molv .layui-laydate-header i, .laydate-theme-molv .layui-laydate-header span {
+.laydate-theme-molv .layui-laydate-header i,
+.laydate-theme-molv .layui-laydate-header span {
     color: #f6f6f6
 }
 
-.laydate-theme-molv .layui-laydate-header i:hover, .laydate-theme-molv .layui-laydate-header span:hover {
+.laydate-theme-molv .layui-laydate-header i:hover,
+.laydate-theme-molv .layui-laydate-header span:hover {
     color: #fff
 }
 
@@ -431,33 +457,41 @@ html #layuicss-laydate {
     border-left: none
 }
 
-.laydate-theme-grid .laydate-month-list > li, .laydate-theme-grid .laydate-year-list > li, .laydate-theme-grid .layui-laydate-content td, .laydate-theme-grid .layui-laydate-content thead, .laydate-theme-molv .layui-laydate-footer {
+.laydate-theme-grid .laydate-month-list>li,
+.laydate-theme-grid .laydate-year-list>li,
+.laydate-theme-grid .layui-laydate-content td,
+.laydate-theme-grid .layui-laydate-content thead,
+.laydate-theme-molv .layui-laydate-footer {
     border: 1px solid #e2e2e2
 }
 
-.laydate-theme-grid .laydate-selected, .laydate-theme-grid .laydate-selected:hover {
+.laydate-theme-grid .laydate-selected,
+.laydate-theme-grid .laydate-selected:hover {
     background-color: #f2f2f2 !important;
     color: #009688 !important
 }
 
-.laydate-theme-grid .laydate-selected.laydate-day-next, .laydate-theme-grid .laydate-selected.laydate-day-prev {
+.laydate-theme-grid .laydate-selected.laydate-day-next,
+.laydate-theme-grid .laydate-selected.laydate-day-prev {
     color: #d2d2d2 !important
 }
 
-.laydate-theme-grid .laydate-month-list, .laydate-theme-grid .laydate-year-list {
+.laydate-theme-grid .laydate-month-list,
+.laydate-theme-grid .laydate-year-list {
     margin: 1px 0 0 1px
 }
 
-.laydate-theme-grid .laydate-month-list > li, .laydate-theme-grid .laydate-year-list > li {
+.laydate-theme-grid .laydate-month-list>li,
+.laydate-theme-grid .laydate-year-list>li {
     margin: 0 -1px -1px 0
 }
 
-.laydate-theme-grid .laydate-year-list > li {
+.laydate-theme-grid .laydate-year-list>li {
     height: 43px;
     line-height: 43px
 }
 
-.laydate-theme-grid .laydate-month-list > li {
+.laydate-theme-grid .laydate-month-list>li {
     height: 71px;
     line-height: 71px
 }

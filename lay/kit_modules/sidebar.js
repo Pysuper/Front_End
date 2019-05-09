@@ -1,5 +1,5 @@
-/** kitadmin-v2.1.0 MIT License By http://kit.zhengjinfan.cn Author Van Zheng */
-;"use strict";
+/** kitadmin-v2.1.0 MIT License By http://kit.zhengjinfan.cn Author Van Zheng */ ;
+"use strict";
 var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (i) {
     return typeof i
 } : function (i) {
@@ -14,9 +14,12 @@ function _defineProperty(i, e, t) {
         writable: !0
     }) : i[e] = t, i
 }
-
 layui.define(["layer", "laytpl", "utils", "lodash"], function (i) {
-    var e = layui.jquery, t = (layui.layer, layui.laytpl), n = layui.lodash, a = layui.utils, d = e("body"),
+    var e = layui.jquery,
+        t = (layui.layer, layui.laytpl),
+        n = layui.lodash,
+        a = layui.utils,
+        d = e("body"),
         o = function () {
             this.version = "1.0.0"
         },
@@ -34,11 +37,18 @@ layui.define(["layer", "laytpl", "utils", "lodash"], function (i) {
         width: "280px",
         done: void 0
     }, o.prototype.render = function (i) {
-        var t = this, d = n.cloneDeep(t.defaults);
+        var t = this,
+            d = n.cloneDeep(t.defaults);
         e.extend(!0, d, i);
         var o = d;
         if (!a.oneOf(o.direction, ["left", "right"])) return a.error('Sidebar error: [direction] property error,Only "left" or "right" .'), t;
-        var r = {title: o.title, id: a.randomCode(), content: o.content, direction: o.direction, width: o.width};
+        var r = {
+            title: o.title,
+            id: a.randomCode(),
+            content: o.content,
+            direction: o.direction,
+            width: o.width
+        };
         if (o.dynamicRender) {
             var l = o.url + "?version=" + (new Date).getTime();
             a.tplLoader(l, function (i) {
@@ -54,13 +64,14 @@ layui.define(["layer", "laytpl", "utils", "lodash"], function (i) {
             var o = e(i.elem);
             void 0 === o.attr("kit-sidebar-target") && t(r).render(n, function (t) {
                 i.shade && (t = t + '<div class="kit-shade" kit-shade="' + n.id + '"></div>'), d.append(t), "function" == typeof i.done && i.done();
-                var r = e('div[kit-sidebar="' + n.id + '"]'), l = e('div[kit-shade="' + n.id + '"]');
+                var r = e('div[kit-sidebar="' + n.id + '"]'),
+                    l = e('div[kit-shade="' + n.id + '"]');
                 o.attr("data-toggle", "off"), o.attr("kit-sidebar-target", "true"), o.on("click", function () {
                     switch (e(this).data("toggle")) {
-                        case"on":
+                        case "on":
                             r.animate(_defineProperty({}, i.direction, "-" + i.width)), l.hide(), e(this).data("toggle", "off");
                             break;
-                        case"off":
+                        case "off":
                             r.animate(_defineProperty({}, i.direction, "0px")), l.show(), e(this).data("toggle", "on")
                     }
                 }), "object" === _typeof(i.elem) && o.click(), i.shadeClose && l.on("click", function () {
@@ -80,9 +91,11 @@ layui.define(["layer", "laytpl", "utils", "lodash"], function (i) {
                     o.click()
                 })
             })
-        }, showLoading: function (i) {
+        },
+        showLoading: function (i) {
             i.append(l.join(""))
-        }, hideLoading: function (i) {
+        },
+        hideLoading: function (i) {
             setTimeout(function () {
                 var e = i.find(".kit-sidebar-loading");
                 e.addClass("layui-anim-fadeout"), setTimeout(function () {

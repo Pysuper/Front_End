@@ -1,106 +1,428 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	a,
+	img {
+		border: 0;
+	}
+
+	body {
+		font: 12px/180% Arial, Helvetica, sans-serif, "������";
+	}
+
+	/* header */
+	header {
+		width: 80%;
+		height: 50px;
+		background: #6a8bbc;
+		color: #fff;
+		text-align: center;
+		;
+		/* padding-top: 20px; */
+		font-size: 30px;
+		margin: 30px 0 20px 10%
+	}
+
+	/* select */
+
+	.select {
+		float: left;
+		padding: 5px 10px;
+		border: #ddd 1px solid;
+		border-radius: 4px;
+		width: 60%;
+		font-size: 14px;
+		margin: 20px 0 0 15%;
+	}
+
+	.select li {
+		list-style: none;
+		padding: 10px 0 5px 100px
+	}
+
+	.select .select-list {
+		border-bottom: #eee 1px dashed
+	}
+
+	.select dl {
+		zoom: 1;
+		position: relative;
+		line-height: 24px;
+	}
+
+	.select dl:after {
+		content: " ";
+		display: block;
+		clear: both;
+		height: 0;
+		overflow: hidden
+	}
+
+	.select dt {
+		width: 100px;
+		margin-bottom: 5px;
+		position: absolute;
+		top: 0;
+		left: -100px;
+		text-align: right;
+		color: #666;
+		height: 24px;
+		line-height: 24px
+	}
+
+	.select dd {
+		float: left;
+		display: inline;
+		margin: 0 0 5px 5px;
+	}
+
+	.select a {
+		display: inline-block;
+		white-space: nowrap;
+		height: 24px;
+		padding: 0 10px;
+		text-decoration: none;
+		color: #039;
+		border-radius: 2px;
+	}
+
+	.select a:hover {
+		color: #3399CC;
+		background-color: #f3edc2
+	}
+
+	.select .selected a {
+		color: #fff;
+		background-color: #3399CC
+	}
+
+	.select-result dt {
+		font-weight: bold
+	}
+
+	.select-no {
+		color: #999
+	}
+
+	.select .select-result a {
+		padding-right: 20px;
+		background: rgb(57, 170, 226) url("../image/close.gif") right 9px no-repeat
+	}
+
+	.select .select-result a:hover {
+		background-position: right -15px
+	}
+
+	.result_list li {
+		padding: 2px 0 2px 50px;
+		position: relative;
+		/* border-bottom: 1px dotted #a5bfe0; */
+		height: 50px;
+		line-height: 22px;
+	}
+
+	.result_num {
+		line-height: 30px;
+		font-weight: bold;
+		font-size: 14px;
+		color: #333;
+	}
+</style>
 <div class="layui-fluid">
-    <div class="layui-row">
-        <div class="layui-col-xs12">
-            <div class="layui-card">
-                <div class="layui-card-header">时间线-> 文档请参考：
-                    <a href="http://www.layui.com/doc/element/timeline.html" target="_blank">
-                        <span>http://www.layui.com/doc/element/timeline.html</span>
-                    </a>
-                </div>
-                <div class="layui-card-body">
-
-                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-                        <legend>常规时间线</legend>
-                    </fieldset>
-                    <ul class="layui-timeline">
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <h3 class="layui-timeline-title">8月18日</h3>
-                                <p>
-                                    layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
-                                    <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
-                                    <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <h3 class="layui-timeline-title">8月16日</h3>
-                                <p>杜甫的思想核心是儒家的仁政思想，他有<em>“致君尧舜上，再使风俗淳”</em>的宏伟抱负。个人最爱的名篇有：</p>
-                                <ul>
-                                    <li>《登高》</li>
-                                    <li>《茅屋为秋风所破歌》</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <h3 class="layui-timeline-title">8月15日</h3>
-                                <p>
-                                    中国人民抗日战争胜利日
-                                    <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
-                                    <br>铭记、感恩
-                                    <br>所有为中华民族浴血奋战的英雄将士
-                                    <br>永垂不朽
-                                </p>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <div class="layui-timeline-title">过去</div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-                        <legend>简约时间线：大事记</legend>
-                    </fieldset>
-                    <ul class="layui-timeline">
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <div class="layui-timeline-title">2018年，layui 5.0 发布。并发展成为中国最受欢迎的前端UI框架（期望）</div>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <div class="layui-timeline-title">2017年，layui 里程碑版本 2.0 发布</div>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <div class="layui-timeline-title">2016年，layui 首个版本发布</div>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <div class="layui-timeline-title">2015年，layui 孵化</div>
-                            </div>
-                        </li>
-                        <li class="layui-timeline-item">
-                            <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop layui-timeline-axis"></i>
-                            <div class="layui-timeline-content layui-text">
-                                <div class="layui-timeline-title">更久前，轮子时代。维护几个独立组件：layer等</div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="layui-row">
+		<div class="layui-col-xs12">
+			<div class="layui-card">
+				<div class="layui-card-header">时间线-> 文档请参考：
+					<a href="http://www.layui.com/doc/element/timeline.html" target="_blank">
+						<span>http://www.layui.com/doc/element/timeline.html</span>
+					</a>
+				</div>
+				<div class="layui-card-body">
+					<!-- 筛选栏 -->
+					<ul class="select">
+						<li class="select-list">
+							<dl id="select2">
+								<dt>车型：</dt>
+								<dd class="select-all selected">
+									<a href="#">不限</a>
+								</dd>
+								<dd>
+									<a href="#">Lamando PA</a>
+								</dd>
+								<dd>
+									<a href="#">Lavida</a>
+								</dd>
+								<dd>
+									<a href="#">Octavia A7</a>
+								</dd>
+								<dd>
+									<a href="#">Gran Lavida</a>
+								</dd>
+								<dd>
+									<a href="#">Tharu</a>
+								</dd>
+								<dd>
+									<a href="#">Karoq</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="select-list">
+							<dl id="select3">
+								<dt>动力总成：</dt>
+								<dd class="select-all selected">
+									<a href="#">不限</a>
+								</dd>
+								<dd>
+									<a href="#">EA211 1.4L</a>
+								</dd>
+								<dd>
+									<a href="#">1.5L</a>
+								</dd>
+								<dd>
+									<a href="#">1.6L</a>
+								</dd>
+								<dd>
+									<a href="#">1.2T</a>
+								</dd>
+								<dd>
+									<a href="#">EA211 1.4T</a>
+								</dd>
+								<dd>
+									<a href="#">1.8T</a>
+								</dd>
+								<dd>
+									<a href="#">EA888 2.0T</a>
+								</dd>
+								<dd>
+									<a href="#">2.5T</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="select-list">
+							<dl id="select5">
+								<dt>功率：</dt>
+								<dd class="select-all selected">
+									<a href="#">不限</a>
+								</dd>
+								<dd>
+									<a href="#">66 kw</a>
+								</dd>
+								<dd>
+									<a href="#">79 kw</a>
+								</dd>
+								<dd>
+									<a href="#">81 kw</a>
+								</dd>
+								<dd>
+									<a href="#">83 kw</a>
+								</dd>
+								<dd>
+									<a href="#">85 kw</a>
+								</dd>
+								<dd>
+									<a href="#">96 kw</a>
+								</dd>
+								<dd>
+									<a href="#">110 kw</a>
+								</dd>
+								<dd>
+									<a href="#">132 kw</a>
+								</dd>
+								<dd>
+									<a href="#">140 kw</a>
+								</dd>
+								<dd>
+									<a href="#">162 kw</a>
+								</dd>
+								<dd>
+									<a href="#">165 kw</a>
+								</dd>
+								<dd>
+									<a href="#">220 kw</a>
+								</dd>
+								<dd>
+									<a href="#"></a>
+								</dd>
+							</dl>
+						</li>
+						<li class="select-list">
+							<dl id="select4">
+								<dt>专业方向：</dt>
+								<dd class="select-all selected">
+									<a href="#">不限</a>
+								</dd>
+								<dd>
+									<a href="#">动力总成</a>
+								</dd>
+								<dd>
+									<a href="#">进排气</a>
+								</dd>
+								<dd>
+									<a href="#">新能源</a>
+								</dd>
+								<dd>
+									<a href="#">底盘支撑</a>
+								</dd>
+								<dd>
+									<a href="#">辅助总成</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="select-list">
+							<dl id="select6">
+								<dt>零部件：</dt>
+								<dd class="select-all selected">
+									<a href="#">不限</a>
+								</dd>
+								<dd>
+									<a href="#">发动机</a>
+								</dd>
+								<dd>
+									<a href="#">变速箱</a>
+								</dd>
+								<dd>
+									<a href="#">排气管</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="select-result">
+							<dl>
+								<dt>已选条件：</dt>
+								<dd class="select-no">未选择过滤条件</dd>
+								<button
+									style="float:right;border-radius: 100px;background-color:#ff5722;border: none;width: 50px;width: 60px;height: 24px;"
+									class="clearAll" onclick="plotfrom()">确定</button>
+								<script>
+									function plotfrom() {
+										$.ajax({
+											type: "GET",
+											url: "http://api.epgn.site:8000/car/",
+											dataType: 'JSON',
+											data: {
+												"plot": "MQB37",
+												"propulsion": "1.6"
+											},
+											success: window.location.href = "http://127.0.0.1:8000/car/?plot=MQB37&propulsion=1.6"
+										});
+									}
+								</script>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-<script>
-</script>
-
+<div style="margin-left: 16%;" class="wrapper clearfix">
+	<p class="result_num">
+		<strong id="tips_top">符合您选择条件的数据有：</strong>
+		<span style="color: #c00;" id="Anchor_top" class="f20">{{ data.num }}</span> 条</p>
+</div>
+<!-- 检索的结果展示 -->
+<div class="layui-form">
+	<table style="width: 70%;margin-left: 12%" class="layui-table">
+		<colgroup>
+			<col width="150">
+			<col width="150">
+			<col width="200">
+			<col>
+		</colgroup>
+		<thead style="font-weight:bold;">
+			<tr>
+				<th>车号</th>
+				<th>作者</th>
+				<th>时间</th>
+				<th>文件位置</th>
+				<th>选择文件</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>AE-123</td>
+				<td>张三</td>
+				<td>2018-10-14</td>
+				<td>Z:\zhangsan\epgn_ingo\700(qwer).asc</td>
+				<td>
+					<div>
+						<input type="checkbox" name="like[write]" title="写作">
+						<div class="layui-unselect layui-form-checkbox"><span>写作</span><i
+								class="layui-icon layui-icon-ok"></i></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>AE-123</td>
+				<td>张三</td>
+				<td>2018-10-14</td>
+				<td>Z:\zhangsan\epgn_ingo\700(qwer).asc</td>
+				<td>
+					<div>
+						<input type="checkbox" name="like[write]" title="写作">
+						<div class="layui-unselect layui-form-checkbox"><span>写作</span><i
+								class="layui-icon layui-icon-ok"></i></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>AE-123</td>
+				<td>张三</td>
+				<td>2018-10-14</td>
+				<td>Z:\zhangsan\epgn_ingo\700(qwer).asc</td>
+				<td>
+					<div>
+						<input type="checkbox" name="like[write]" title="写作">
+						<div class="layui-unselect layui-form-checkbox"><span>写作</span><i
+								class="layui-icon layui-icon-ok"></i></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>AE-123</td>
+				<td>张三</td>
+				<td>2018-10-14</td>
+				<td>Z:\zhangsan\epgn_ingo\700(qwer).asc</td>
+				<td>
+					<div>
+						<input type="checkbox" name="like[write]" title="写作">
+						<div class="layui-unselect layui-form-checkbox"><span>写作</span><i
+								class="layui-icon layui-icon-ok"></i></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>AE-123</td>
+				<td>张三</td>
+				<td>2018-10-14</td>
+				<td>Z:\zhangsan\epgn_ingo\700(qwer).asc</td>
+				<td>
+					<div>
+						<input type="checkbox" name="like[write]" title="写作">
+						<div class="layui-unselect layui-form-checkbox"><span>写作</span><i
+								class="layui-icon layui-icon-ok"></i></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>AE-123</td>
+				<td>张三</td>
+				<td>2018-10-14</td>
+				<td>Z:\zhangsan\epgn_ingo\700(qwer).asc</td>
+				<td>
+					<div>
+						<input type="checkbox" name="like[write]" title="写作">
+						<div class="layui-unselect layui-form-checkbox"><span>写作</span><i
+								class="layui-icon layui-icon-ok"></i></div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 <style scoped>
 
 </style>

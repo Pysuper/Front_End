@@ -90,7 +90,7 @@
     flex: 1
 }
 
-.kit-login-wapper .kit-login-row .kit-login-col > i.layui-icon {
+.kit-login-wapper .kit-login-row .kit-login-col>i.layui-icon {
     position: absolute;
     left: 5px;
     top: 5px;
@@ -131,7 +131,7 @@
     vertical-align: baseline;
     background-color: transparent;
     height: 26px;
-    line-height: 26px \9;
+    line-height: 26px\9;
     margin: 0;
     padding: 0 8px;
     border-radius: 4px;

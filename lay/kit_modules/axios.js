@@ -1,5 +1,5 @@
-/** kitadmin-v2.1.0 MIT License By http://kit.zhengjinfan.cn Author Van Zheng */
-;"use strict";
+/** kitadmin-v2.1.0 MIT License By http://kit.zhengjinfan.cn Author Van Zheng */ ;
+"use strict";
 var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) {
     return typeof e
 } : function (e) {
@@ -11,21 +11,28 @@ layui.define(function (e) {
         return function (e) {
             function t(r) {
                 if (n[r]) return n[r].exports;
-                var o = n[r] = {exports: {}, id: r, loaded: !1};
+                var o = n[r] = {
+                    exports: {},
+                    id: r,
+                    loaded: !1
+                };
                 return e[r].call(o.exports, o, o.exports, t), o.loaded = !0, o.exports
             }
-
             var n = {};
             return t.m = e, t.c = n, t.p = "", t(0)
         }([function (e, t, n) {
             e.exports = n(1)
         }, function (e, t, n) {
             function r(e) {
-                var t = new a(e), n = i(a.prototype.request, t);
+                var t = new a(e),
+                    n = i(a.prototype.request, t);
                 return o.extend(n, a.prototype, t), o.extend(n, t), n
             }
-
-            var o = n(2), i = n(3), a = n(5), s = n(6), u = r(s);
+            var o = n(2),
+                i = n(3),
+                a = n(5),
+                s = n(6),
+                u = r(s);
             u.Axios = a, u.create = function (e) {
                 return r(o.merge(s, e))
             }, u.Cancel = n(23), u.CancelToken = n(24), u.isCancel = n(20), u.all = function (e) {
@@ -45,47 +52,70 @@ layui.define(function (e) {
             }
 
             function a(e, t) {
-                if (null !== e && void 0 !== e) if ("object" != (void 0 === e ? "undefined" : _typeof(e)) && (e = [e]), r(e)) for (var n = 0, o = e.length; n < o; n++) t.call(null, e[n], n, e); else for (var i in e) Object.prototype.hasOwnProperty.call(e, i) && t.call(null, e[i], i, e)
+                if (null !== e && void 0 !== e)
+                    if ("object" != (void 0 === e ? "undefined" : _typeof(e)) && (e = [e]), r(e))
+                        for (var n = 0, o = e.length; n < o; n++) t.call(null, e[n], n, e);
+                    else
+                        for (var i in e) Object.prototype.hasOwnProperty.call(e, i) && t.call(null, e[i], i, e)
             }
-
-            var s = n(3), u = n(4), f = Object.prototype.toString;
+            var s = n(3),
+                u = n(4),
+                f = Object.prototype.toString;
             e.exports = {
-                isArray: r, isArrayBuffer: function (e) {
+                isArray: r,
+                isArrayBuffer: function (e) {
                     return "[object ArrayBuffer]" === f.call(e)
-                }, isBuffer: u, isFormData: function (e) {
+                },
+                isBuffer: u,
+                isFormData: function (e) {
                     return "undefined" != typeof FormData && e instanceof FormData
-                }, isArrayBufferView: function (e) {
+                },
+                isArrayBufferView: function (e) {
                     return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : e && e.buffer && e.buffer instanceof ArrayBuffer
-                }, isString: function (e) {
+                },
+                isString: function (e) {
                     return "string" == typeof e
-                }, isNumber: function (e) {
+                },
+                isNumber: function (e) {
                     return "number" == typeof e
-                }, isObject: o, isUndefined: function (e) {
+                },
+                isObject: o,
+                isUndefined: function (e) {
                     return void 0 === e
-                }, isDate: function (e) {
+                },
+                isDate: function (e) {
                     return "[object Date]" === f.call(e)
-                }, isFile: function (e) {
+                },
+                isFile: function (e) {
                     return "[object File]" === f.call(e)
-                }, isBlob: function (e) {
+                },
+                isBlob: function (e) {
                     return "[object Blob]" === f.call(e)
-                }, isFunction: i, isStream: function (e) {
+                },
+                isFunction: i,
+                isStream: function (e) {
                     return o(e) && i(e.pipe)
-                }, isURLSearchParams: function (e) {
+                },
+                isURLSearchParams: function (e) {
                     return "undefined" != typeof URLSearchParams && e instanceof URLSearchParams
-                }, isStandardBrowserEnv: function () {
+                },
+                isStandardBrowserEnv: function () {
                     return ("undefined" == typeof navigator || "ReactNative" !== navigator.product) && "undefined" != typeof window && "undefined" != typeof document
-                }, forEach: a, merge: function e() {
+                },
+                forEach: a,
+                merge: function e() {
                     function t(t, r) {
                         "object" == _typeof(n[r]) && "object" == (void 0 === t ? "undefined" : _typeof(t)) ? n[r] = e(n[r], t) : n[r] = t
                     }
-
                     for (var n = {}, r = 0, o = arguments.length; r < o; r++) a(arguments[r], t);
                     return n
-                }, extend: function (e, t, n) {
+                },
+                extend: function (e, t, n) {
                     return a(t, function (t, r) {
                         e[r] = n && "function" == typeof t ? s(t, n) : t
                     }), e
-                }, trim: function (e) {
+                },
+                trim: function (e) {
                     return e.replace(/^\s*/, "").replace(/\s*$/, "")
                 }
             }
@@ -100,61 +130,84 @@ layui.define(function (e) {
             function n(e) {
                 return !!e.constructor && "function" == typeof e.constructor.isBuffer && e.constructor.isBuffer(e)
             }
-
             e.exports = function (e) {
-                return null != e && (n(e) || "function" == typeof(t = e).readFloatLE && "function" == typeof t.slice && n(t.slice(0, 0)) || !!e._isBuffer);
+                return null != e && (n(e) || "function" == typeof (t = e).readFloatLE && "function" == typeof t.slice && n(t.slice(0, 0)) || !!e._isBuffer);
                 var t
             }
         }, function (e, t, n) {
             function r(e) {
-                this.defaults = e, this.interceptors = {request: new a, response: new a}
+                this.defaults = e, this.interceptors = {
+                    request: new a,
+                    response: new a
+                }
             }
-
-            var o = n(6), i = n(2), a = n(17), s = n(18);
+            var o = n(6),
+                i = n(2),
+                a = n(17),
+                s = n(18);
             r.prototype.request = function (e) {
-                "string" == typeof e && (e = i.merge({url: arguments[0]}, arguments[1])), (e = i.merge(o, this.defaults, {method: "get"}, e)).method = e.method.toLowerCase();
-                var t = [s, void 0], n = Promise.resolve(e);
+                "string" == typeof e && (e = i.merge({
+                    url: arguments[0]
+                }, arguments[1])), (e = i.merge(o, this.defaults, {
+                    method: "get"
+                }, e)).method = e.method.toLowerCase();
+                var t = [s, void 0],
+                    n = Promise.resolve(e);
                 for (this.interceptors.request.forEach(function (e) {
-                    t.unshift(e.fulfilled, e.rejected)
-                }), this.interceptors.response.forEach(function (e) {
-                    t.push(e.fulfilled, e.rejected)
-                }); t.length;) n = n.then(t.shift(), t.shift());
+                        t.unshift(e.fulfilled, e.rejected)
+                    }), this.interceptors.response.forEach(function (e) {
+                        t.push(e.fulfilled, e.rejected)
+                    }); t.length;) n = n.then(t.shift(), t.shift());
                 return n
             }, i.forEach(["delete", "get", "head", "options"], function (e) {
                 r.prototype[e] = function (t, n) {
-                    return this.request(i.merge(n || {}, {method: e, url: t}))
+                    return this.request(i.merge(n || {}, {
+                        method: e,
+                        url: t
+                    }))
                 }
             }), i.forEach(["post", "put", "patch"], function (e) {
                 r.prototype[e] = function (t, n, r) {
-                    return this.request(i.merge(r || {}, {method: e, url: t, data: n}))
+                    return this.request(i.merge(r || {}, {
+                        method: e,
+                        url: t,
+                        data: n
+                    }))
                 }
             }), e.exports = r
         }, function (e, t, n) {
             function r(e, t) {
                 !i.isUndefined(e) && i.isUndefined(e["Content-Type"]) && (e["Content-Type"] = t)
             }
-
-            var o, i = n(2), a = n(7), s = {"Content-Type": "application/x-www-form-urlencoded"}, u = {
-                adapter: ("undefined" != typeof XMLHttpRequest ? o = n(8) : "undefined" != typeof process && (o = n(8)), o),
-                transformRequest: [function (e, t) {
-                    return a(t, "Content-Type"), i.isFormData(e) || i.isArrayBuffer(e) || i.isBuffer(e) || i.isStream(e) || i.isFile(e) || i.isBlob(e) ? e : i.isArrayBufferView(e) ? e.buffer : i.isURLSearchParams(e) ? (r(t, "application/x-www-form-urlencoded;charset=utf-8"), e.toString()) : i.isObject(e) ? (r(t, "application/json;charset=utf-8"), JSON.stringify(e)) : e
-                }],
-                transformResponse: [function (e) {
-                    if ("string" == typeof e) try {
-                        e = JSON.parse(e)
-                    } catch (e) {
+            var o, i = n(2),
+                a = n(7),
+                s = {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                u = {
+                    adapter: ("undefined" != typeof XMLHttpRequest ? o = n(8) : "undefined" != typeof process && (o = n(8)), o),
+                    transformRequest: [function (e, t) {
+                        return a(t, "Content-Type"), i.isFormData(e) || i.isArrayBuffer(e) || i.isBuffer(e) || i.isStream(e) || i.isFile(e) || i.isBlob(e) ? e : i.isArrayBufferView(e) ? e.buffer : i.isURLSearchParams(e) ? (r(t, "application/x-www-form-urlencoded;charset=utf-8"), e.toString()) : i.isObject(e) ? (r(t, "application/json;charset=utf-8"), JSON.stringify(e)) : e
+                    }],
+                    transformResponse: [function (e) {
+                        if ("string" == typeof e) try {
+                            e = JSON.parse(e)
+                        } catch (e) {}
+                        return e
+                    }],
+                    timeout: 0,
+                    xsrfCookieName: "XSRF-TOKEN",
+                    xsrfHeaderName: "X-XSRF-TOKEN",
+                    maxContentLength: -1,
+                    validateStatus: function (e) {
+                        return e >= 200 && e < 300
                     }
-                    return e
-                }],
-                timeout: 0,
-                xsrfCookieName: "XSRF-TOKEN",
-                xsrfHeaderName: "X-XSRF-TOKEN",
-                maxContentLength: -1,
-                validateStatus: function (e) {
-                    return e >= 200 && e < 300
+                };
+            u.headers = {
+                common: {
+                    Accept: "application/json, text/plain, */*"
                 }
-            };
-            u.headers = {common: {Accept: "application/json, text/plain, */*"}}, i.forEach(["delete", "get", "head"], function (e) {
+            }, i.forEach(["delete", "get", "head"], function (e) {
                 u.headers[e] = {}
             }), i.forEach(["post", "put", "patch"], function (e) {
                 u.headers[e] = i.merge(s)
@@ -167,43 +220,51 @@ layui.define(function (e) {
                 })
             }
         }, function (e, t, n) {
-            var r = n(2), o = n(9), i = n(12), a = n(13), s = n(14), u = n(10),
+            var r = n(2),
+                o = n(9),
+                i = n(12),
+                a = n(13),
+                s = n(14),
+                u = n(10),
                 f = "undefined" != typeof window && window.btoa && window.btoa.bind(window) || n(15);
             e.exports = function (e) {
                 return new Promise(function (t, c) {
-                    var p = e.data, d = e.headers;
+                    var p = e.data,
+                        d = e.headers;
                     r.isFormData(p) && delete d["Content-Type"];
-                    var l = new XMLHttpRequest, h = "onreadystatechange", m = !1;
-                    if ("undefined" == typeof window || !window.XDomainRequest || "withCredentials" in l || s(e.url) || (l = new window.XDomainRequest, h = "onload", m = !0, l.onprogress = function () {
-                    }, l.ontimeout = function () {
-                    }), e.auth) {
-                        var y = e.auth.username || "", v = e.auth.password || "";
+                    var l = new XMLHttpRequest,
+                        h = "onreadystatechange",
+                        m = !1;
+                    if ("undefined" == typeof window || !window.XDomainRequest || "withCredentials" in l || s(e.url) || (l = new window.XDomainRequest, h = "onload", m = !0, l.onprogress = function () {}, l.ontimeout = function () {}), e.auth) {
+                        var y = e.auth.username || "",
+                            v = e.auth.password || "";
                         d.Authorization = "Basic " + f(y + ":" + v)
                     }
                     if (l.open(e.method.toUpperCase(), i(e.url, e.params, e.paramsSerializer), !0), l.timeout = e.timeout, l[h] = function () {
-                        if (l && (4 === l.readyState || m) && (0 !== l.status || l.responseURL && 0 === l.responseURL.indexOf("file:"))) {
-                            var n = "getAllResponseHeaders" in l ? a(l.getAllResponseHeaders()) : null, r = {
-                                data: e.responseType && "text" !== e.responseType ? l.response : l.responseText,
-                                status: 1223 === l.status ? 204 : l.status,
-                                statusText: 1223 === l.status ? "No Content" : l.statusText,
-                                headers: n,
-                                config: e,
-                                request: l
-                            };
-                            o(t, c, r), l = null
-                        }
-                    }, l.onerror = function () {
-                        c(u("Network Error", e, null, l)), l = null
-                    }, l.ontimeout = function () {
-                        c(u("timeout of " + e.timeout + "ms exceeded", e, "ECONNABORTED", l)), l = null
-                    }, r.isStandardBrowserEnv()) {
+                            if (l && (4 === l.readyState || m) && (0 !== l.status || l.responseURL && 0 === l.responseURL.indexOf("file:"))) {
+                                var n = "getAllResponseHeaders" in l ? a(l.getAllResponseHeaders()) : null,
+                                    r = {
+                                        data: e.responseType && "text" !== e.responseType ? l.response : l.responseText,
+                                        status: 1223 === l.status ? 204 : l.status,
+                                        statusText: 1223 === l.status ? "No Content" : l.statusText,
+                                        headers: n,
+                                        config: e,
+                                        request: l
+                                    };
+                                o(t, c, r), l = null
+                            }
+                        }, l.onerror = function () {
+                            c(u("Network Error", e, null, l)), l = null
+                        }, l.ontimeout = function () {
+                            c(u("timeout of " + e.timeout + "ms exceeded", e, "ECONNABORTED", l)), l = null
+                        }, r.isStandardBrowserEnv()) {
                         var w = n(16),
                             g = (e.withCredentials || s(e.url)) && e.xsrfCookieName ? w.read(e.xsrfCookieName) : void 0;
                         g && (d[e.xsrfHeaderName] = g)
                     }
                     if ("setRequestHeader" in l && r.forEach(d, function (e, t) {
-                        void 0 === p && "content-type" === t.toLowerCase() ? delete d[t] : l.setRequestHeader(t, e)
-                    }), e.withCredentials && (l.withCredentials = !0), e.responseType) try {
+                            void 0 === p && "content-type" === t.toLowerCase() ? delete d[t] : l.setRequestHeader(t, e)
+                        }), e.withCredentials && (l.withCredentials = !0), e.responseType) try {
                         l.responseType = e.responseType
                     } catch (t) {
                         if ("json" !== e.responseType) throw t
@@ -233,12 +294,13 @@ layui.define(function (e) {
             function r(e) {
                 return encodeURIComponent(e).replace(/%40/gi, "@").replace(/%3A/gi, ":").replace(/%24/g, "$").replace(/%2C/gi, ",").replace(/%20/g, "+").replace(/%5B/gi, "[").replace(/%5D/gi, "]")
             }
-
             var o = n(2);
             e.exports = function (e, t, n) {
                 if (!t) return e;
                 var i;
-                if (n) i = n(t); else if (o.isURLSearchParams(t)) i = t.toString(); else {
+                if (n) i = n(t);
+                else if (o.isURLSearchParams(t)) i = t.toString();
+                else {
                     var a = [];
                     o.forEach(t, function (e, t) {
                         null !== e && void 0 !== e && (o.isArray(e) && (t += "[]"), o.isArray(e) || (e = [e]), o.forEach(e, function (e) {
@@ -276,12 +338,13 @@ layui.define(function (e) {
                         pathname: "/" === o.pathname.charAt(0) ? o.pathname : "/" + o.pathname
                     }
                 }
-
-                var t, n = /(msie|trident)/i.test(navigator.userAgent), o = document.createElement("a");
-                return t = e(window.location.href), function (n) {
-                    var o = r.isString(n) ? e(n) : n;
-                    return o.protocol === t.protocol && o.host === t.host
-                }
+                var t, n = /(msie|trident)/i.test(navigator.userAgent),
+                    o = document.createElement("a");
+                return t = e(window.location.href),
+                    function (n) {
+                        var o = r.isString(n) ? e(n) : n;
+                        return o.protocol === t.protocol && o.host === t.host
+                    }
             }() : function () {
                 return !0
             }
@@ -289,7 +352,6 @@ layui.define(function (e) {
             function n() {
                 this.message = "String contains an invalid character"
             }
-
             var r = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
             n.prototype = new Error, n.prototype.code = 5, n.prototype.name = "InvalidCharacterError", e.exports = function (e) {
                 for (var t, o, i = String(e), a = "", s = 0, u = r; i.charAt(0 | s) || (u = "=", s % 1); a += u.charAt(63 & t >> 8 - s % 1 * 8)) {
@@ -304,27 +366,31 @@ layui.define(function (e) {
                 write: function (e, t, n, o, i, a) {
                     var s = [];
                     s.push(e + "=" + encodeURIComponent(t)), r.isNumber(n) && s.push("expires=" + new Date(n).toGMTString()), r.isString(o) && s.push("path=" + o), r.isString(i) && s.push("domain=" + i), !0 === a && s.push("secure"), document.cookie = s.join("; ")
-                }, read: function (e) {
+                },
+                read: function (e) {
                     var t = document.cookie.match(new RegExp("(^|;\\s*)(" + e + ")=([^;]*)"));
                     return t ? decodeURIComponent(t[3]) : null
-                }, remove: function (e) {
+                },
+                remove: function (e) {
                     this.write(e, "", Date.now() - 864e5)
                 }
             } : {
-                write: function () {
-                }, read: function () {
+                write: function () {},
+                read: function () {
                     return null
-                }, remove: function () {
-                }
+                },
+                remove: function () {}
             }
         }, function (e, t, n) {
             function r() {
                 this.handlers = []
             }
-
             var o = n(2);
             r.prototype.use = function (e, t) {
-                return this.handlers.push({fulfilled: e, rejected: t}), this.handlers.length - 1
+                return this.handlers.push({
+                    fulfilled: e,
+                    rejected: t
+                }), this.handlers.length - 1
             }, r.prototype.eject = function (e) {
                 this.handlers[e] && (this.handlers[e] = null)
             }, r.prototype.forEach = function (e) {
@@ -336,8 +402,12 @@ layui.define(function (e) {
             function r(e) {
                 e.cancelToken && e.cancelToken.throwIfRequested()
             }
-
-            var o = n(2), i = n(19), a = n(20), s = n(6), u = n(21), f = n(22);
+            var o = n(2),
+                i = n(19),
+                a = n(20),
+                s = n(6),
+                u = n(21),
+                f = n(22);
             e.exports = function (e) {
                 return r(e), e.baseURL && !u(e.url) && (e.url = f(e.baseURL, e.url)), e.headers = e.headers || {}, e.data = i(e.data, e.headers, e.transformRequest), e.headers = o.merge(e.headers.common || {}, e.headers[e.method] || {}, e.headers || {}), o.forEach(["delete", "get", "head", "post", "put", "patch", "common"], function (t) {
                     delete e.headers[t]
@@ -370,7 +440,6 @@ layui.define(function (e) {
             function n(e) {
                 this.message = e
             }
-
             n.prototype.toString = function () {
                 return "Cancel" + (this.message ? ": " + this.message : "")
             }, n.prototype.__CANCEL__ = !0, e.exports = n
@@ -386,7 +455,6 @@ layui.define(function (e) {
                     n.reason || (n.reason = new o(e), t(n.reason))
                 })
             }
-
             var o = n(23);
             r.prototype.throwIfRequested = function () {
                 if (this.reason) throw this.reason
@@ -395,7 +463,8 @@ layui.define(function (e) {
                 return {
                     token: new r(function (t) {
                         e = t
-                    }), cancel: e
+                    }),
+                    cancel: e
                 }
             }, e.exports = r
         }, function (e, t) {
